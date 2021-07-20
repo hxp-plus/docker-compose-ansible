@@ -1,0 +1,189 @@
+2021-07-20 21:54:15,986 p=3528 u=hxp n=ansible | [WARNING]: Unable to parse /home/hxp/docker-compose-ansible/hosts as an inventory source
+
+2021-07-20 21:54:15,986 p=3528 u=hxp n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-07-20 21:54:16,411 p=3528 u=hxp n=ansible | localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2021-07-20 21:54:58,026 p=3592 u=hxp n=ansible | localhost | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\nhxp@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-07-20 21:55:27,480 p=3612 u=hxp n=ansible | localhost | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: hxp@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-07-20 21:56:12,367 p=3665 u=hxp n=ansible | localhost | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: hxp@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-07-20 21:56:31,943 p=3823 u=hxp n=ansible | localhost | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: hxp@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-07-20 21:57:51,218 p=3969 u=hxp n=ansible | localhost | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-07-20 21:59:50,252 p=4012 u=hxp n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/libexec/platform-python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2021-07-20 22:08:26,286 p=4525 u=hxp n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead
+
+The error appears to be in '/home/hxp/docker-compose-ansible/main.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+hosts: all
+^ here
+
+2021-07-20 22:08:54,036 p=4559 u=hxp n=ansible | ERROR! 'gather_faces' is not a valid attribute for a Play
+
+The error appears to be in '/home/hxp/docker-compose-ansible/main.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- hosts: all
+  ^ here
+
+2021-07-20 22:09:11,436 p=4577 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:09:11,446 p=4577 u=hxp n=ansible | TASK [Update yum repos] ********************************************************************************
+2021-07-20 22:09:21,876 p=4577 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:09:21,877 p=4577 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:09:21,878 p=4577 u=hxp n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:20:21,072 p=5226 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:20:21,079 p=5226 u=hxp n=ansible | TASK [Install yum-utils] *******************************************************************************
+2021-07-20 22:20:29,369 p=5226 u=hxp n=ansible | changed: [localhost]
+2021-07-20 22:20:29,372 p=5226 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:20:34,073 p=5226 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo", "delta": "0:00:04.270035", "end": "2021-07-20 22:20:34.020348", "msg": "non-zero return code", "rc": 1, "start": "2021-07-20 22:20:29.750313", "stderr": "Curl error (35): SSL connect error for https://download.docker.com/linux/centos/docker-ce.repo [OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to download.docker.com:443 ]\nError: Configuration of repo failed", "stderr_lines": ["Curl error (35): SSL connect error for https://download.docker.com/linux/centos/docker-ce.repo [OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to download.docker.com:443 ]", "Error: Configuration of repo failed"], "stdout": "Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo", "stdout_lines": ["Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo"]}
+2021-07-20 22:20:34,074 p=5226 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:20:34,075 p=5226 u=hxp n=ansible | localhost                  : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:23:08,452 p=6332 u=hxp n=ansible |  [ERROR]: User interrupted execution
+
+2021-07-20 22:25:05,590 p=6397 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:25:05,598 p=6397 u=hxp n=ansible | TASK [Install yum-utils] *******************************************************************************
+2021-07-20 22:25:05,699 p=6397 u=hxp n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-07-20 22:25:05,700 p=6397 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:25:05,700 p=6397 u=hxp n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:25:23,370 p=6605 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:25:23,379 p=6605 u=hxp n=ansible | TASK [Install yum-utils] *******************************************************************************
+2021-07-20 22:25:41,758 p=6605 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:25:41,761 p=6605 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:25:42,520 p=6605 u=hxp n=ansible | changed: [localhost]
+2021-07-20 22:25:42,521 p=6605 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:25:42,522 p=6605 u=hxp n=ansible | localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:29:01,430 p=7370 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:29:01,440 p=7370 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:29:02,560 p=7370 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:29:02,562 p=7370 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:29:06,495 p=7370 u=hxp n=ansible | failed: [localhost] (item=docker-ce) => {"ansible_facts": {"pkg_mgr": "dnf"}, "ansible_loop_var": "item", "changed": false, "failures": [], "item": "docker-ce", "msg": "Depsolve Error occured: \n Problem: package docker-ce-3:20.10.7-3.el8.x86_64 requires containerd.io >= 1.4.1, but none of the providers can be installed\n  - package containerd.io-1.4.3-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.3-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.3-3.2.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.3-3.2.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.4-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.4-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.6-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.6-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.8-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.8-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - problem with installed package buildah-1.19.8-1.module_el8.5.0+733+9bb5dffa.x86_64\n  - package buildah-1.19.8-1.module_el8.5.0+733+9bb5dffa.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed\n  - cannot install the best candidate for the job\n  - package runc-1.0.0-56.rc5.dev.git2abd837.module_el8.4.0+521+9df8e6d3.x86_64 is filtered out by modular filtering\n  - package runc-1.0.0-64.rc10.module_el8.4.0+522+66908d0c.x86_64 is filtered out by modular filtering\n  - package runc-1.0.0-70.rc92.module_el8.5.0+736+58cc1a5a.x86_64 is filtered out by modular filtering", "rc": 1, "results": []}
+2021-07-20 22:29:24,181 p=7370 u=hxp n=ansible |  [ERROR]: User interrupted execution
+
+2021-07-20 22:29:57,116 p=8131 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:29:57,125 p=8131 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:29:57,994 p=8131 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:29:57,996 p=8131 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:29:59,191 p=8131 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {"pkg_mgr": "dnf"}, "changed": false, "msg": "It appears that a space separated string of packages was passed in as an argument. To operate on several packages, pass a comma separated string of packages or a list of packages."}
+2021-07-20 22:29:59,192 p=8131 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:29:59,192 p=8131 u=hxp n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:30:14,782 p=8621 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:30:14,792 p=8621 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:30:15,606 p=8621 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:30:15,609 p=8621 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:30:25,544 p=8621 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {"pkg_mgr": "dnf"}, "changed": false, "failures": [], "msg": "Depsolve Error occured: \n Problem 1: problem with installed package podman-3.1.0-0.13.module_el8.5.0+733+9bb5dffa.x86_64\n  - package podman-3.1.0-0.13.module_el8.5.0+733+9bb5dffa.x86_64 requires runc >= 1.0.0-57, but none of the providers can be installed\n  - package containerd.io-1.4.8-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.8-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - cannot install the best candidate for the job\n  - package runc-1.0.0-64.rc10.module_el8.4.0+522+66908d0c.x86_64 is filtered out by modular filtering\n  - package runc-1.0.0-70.rc92.module_el8.5.0+736+58cc1a5a.x86_64 is filtered out by modular filtering\n Problem 2: problem with installed package buildah-1.19.8-1.module_el8.5.0+733+9bb5dffa.x86_64\n  - package buildah-1.19.8-1.module_el8.5.0+733+9bb5dffa.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed\n  - package docker-ce-3:20.10.7-3.el8.x86_64 requires containerd.io >= 1.4.1, but none of the providers can be installed\n  - package containerd.io-1.4.3-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.3-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.3-3.2.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.3-3.2.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.4-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.4-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.6-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.6-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.8-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - package containerd.io-1.4.8-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-70.rc92.module_el8.5.0+733+9bb5dffa.x86_64\n  - cannot install the best candidate for the job\n  - package runc-1.0.0-56.rc5.dev.git2abd837.module_el8.4.0+521+9df8e6d3.x86_64 is filtered out by modular filtering\n  - package runc-1.0.0-64.rc10.module_el8.4.0+522+66908d0c.x86_64 is filtered out by modular filtering\n  - package runc-1.0.0-70.rc92.module_el8.5.0+736+58cc1a5a.x86_64 is filtered out by modular filtering", "rc": 1, "results": []}
+2021-07-20 22:30:25,545 p=8621 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:30:25,545 p=8621 u=hxp n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:32:06,559 p=9267 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:32:06,569 p=9267 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:32:07,270 p=9267 u=hxp n=ansible |  [ERROR]: User interrupted execution
+
+2021-07-20 22:32:43,949 p=9508 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:32:43,957 p=9508 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:32:44,814 p=9508 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:32:44,817 p=9508 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:32:47,927 p=9508 u=hxp n=ansible | changed: [localhost]
+2021-07-20 22:32:47,930 p=9508 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:33:42,793 p=9508 u=hxp n=ansible | changed: [localhost]
+2021-07-20 22:33:42,794 p=9508 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:33:42,794 p=9508 u=hxp n=ansible | localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:35:41,657 p=11923 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:35:41,666 p=11923 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:35:42,737 p=11923 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:35:42,740 p=11923 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:35:44,770 p=11923 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:35:44,772 p=11923 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:35:56,668 p=11923 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:35:56,670 p=11923 u=hxp n=ansible | TASK [Enable docker service] ***************************************************************************
+2021-07-20 22:35:58,613 p=11923 u=hxp n=ansible | changed: [localhost]
+2021-07-20 22:35:58,620 p=11923 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:35:58,620 p=11923 u=hxp n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:41:00,265 p=13359 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:41:00,272 p=13359 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:41:01,394 p=13359 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:41:01,397 p=13359 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:41:03,411 p=13359 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:41:03,414 p=13359 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:41:15,394 p=13359 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:41:15,396 p=13359 u=hxp n=ansible | TASK [Enable docker service] ***************************************************************************
+2021-07-20 22:41:16,034 p=13359 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:41:16,037 p=13359 u=hxp n=ansible | TASK [Install pip] *************************************************************************************
+2021-07-20 22:41:17,494 p=13359 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "failures": ["No package pip available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2021-07-20 22:41:17,495 p=13359 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:41:17,495 p=13359 u=hxp n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:41:47,826 p=14355 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:41:47,834 p=14355 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:41:48,706 p=14355 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:41:48,709 p=14355 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:41:48,875 p=14355 u=hxp n=ansible |  [ERROR]: User interrupted execution
+
+2021-07-20 22:41:58,199 p=14675 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:41:58,207 p=14675 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:41:59,040 p=14675 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:41:59,042 p=14675 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:42:01,227 p=14675 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:42:01,229 p=14675 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:42:10,887 p=14675 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:42:10,890 p=14675 u=hxp n=ansible | TASK [Enable docker service] ***************************************************************************
+2021-07-20 22:42:11,465 p=14675 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:42:11,468 p=14675 u=hxp n=ansible | TASK [Install pip] *************************************************************************************
+2021-07-20 22:42:13,007 p=14675 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:42:13,008 p=14675 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:42:13,008 p=14675 u=hxp n=ansible | localhost                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:42:48,654 p=15604 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:42:48,662 p=15604 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:42:49,537 p=15604 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:42:49,540 p=15604 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:42:51,584 p=15604 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:42:51,586 p=15604 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:42:56,681 p=15604 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'docker-ce-stable': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+2021-07-20 22:42:56,682 p=15604 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:42:56,682 p=15604 u=hxp n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-20 22:43:03,461 p=16232 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-20 22:43:03,467 p=16232 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-20 22:43:04,321 p=16232 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:43:04,323 p=16232 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-20 22:43:06,254 p=16232 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:43:06,257 p=16232 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-20 22:43:14,302 p=16232 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:43:14,304 p=16232 u=hxp n=ansible | TASK [Enable docker service] ***************************************************************************
+2021-07-20 22:43:14,925 p=16232 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:43:14,927 p=16232 u=hxp n=ansible | TASK [Install pip] *************************************************************************************
+2021-07-20 22:43:16,300 p=16232 u=hxp n=ansible | ok: [localhost]
+2021-07-20 22:43:16,302 p=16232 u=hxp n=ansible | TASK [Install docker-compose] **************************************************************************
+2021-07-20 22:43:32,652 p=16232 u=hxp n=ansible | changed: [localhost]
+2021-07-20 22:43:32,654 p=16232 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-20 22:43:32,654 p=16232 u=hxp n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
