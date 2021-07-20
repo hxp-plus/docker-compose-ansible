@@ -231,3 +231,68 @@ The offending line appears to be:
 2021-07-20 22:54:56,375 p=20957 u=hxp n=ansible | changed: [localhost]
 2021-07-20 22:54:56,376 p=20957 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
 2021-07-20 22:54:56,377 p=20957 u=hxp n=ansible | localhost                  : ok=7    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-21 07:23:47,391 p=6521 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-21 07:23:47,402 p=6521 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-21 07:23:48,522 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:23:48,525 p=6521 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-21 07:23:50,638 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:23:50,641 p=6521 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-21 07:24:03,532 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:03,535 p=6521 u=hxp n=ansible | TASK [Configure Docker mirror] *************************************************************************
+2021-07-21 07:24:04,243 p=6521 u=hxp n=ansible | changed: [localhost]
+2021-07-21 07:24:04,245 p=6521 u=hxp n=ansible | TASK [Enable docker service] ***************************************************************************
+2021-07-21 07:24:04,863 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:04,865 p=6521 u=hxp n=ansible | TASK [Install pip] *************************************************************************************
+2021-07-21 07:24:06,302 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:06,304 p=6521 u=hxp n=ansible | TASK [Install docker-compose] **************************************************************************
+2021-07-21 07:24:07,533 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:07,536 p=6521 u=hxp n=ansible | TASK [Create docker-compose symlink for root] **********************************************************
+2021-07-21 07:24:07,893 p=6521 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:07,894 p=6521 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-21 07:24:07,894 p=6521 u=hxp n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-21 07:24:50,372 p=8099 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-21 07:24:50,380 p=8099 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-21 07:24:51,259 p=8099 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:51,262 p=8099 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-21 07:24:53,257 p=8099 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:24:53,260 p=8099 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-21 07:24:59,842 p=8099 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'docker-ce-stable': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+2021-07-21 07:24:59,843 p=8099 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-21 07:24:59,843 p=8099 u=hxp n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-21 07:25:03,615 p=8737 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-21 07:25:03,623 p=8737 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-21 07:25:04,516 p=8737 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:04,519 p=8737 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-21 07:25:06,523 p=8737 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:06,526 p=8737 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-21 07:25:15,607 p=8737 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'docker-ce-stable': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+2021-07-21 07:25:15,608 p=8737 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-21 07:25:15,609 p=8737 u=hxp n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-21 07:25:20,593 p=9366 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-21 07:25:20,601 p=9366 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-21 07:25:21,475 p=9366 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:21,478 p=9366 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-21 07:25:23,371 p=9366 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:23,373 p=9366 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-21 07:25:28,624 p=9366 u=hxp n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'docker-ce-stable': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+2021-07-21 07:25:28,625 p=9366 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-21 07:25:28,625 p=9366 u=hxp n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-21 07:25:30,730 p=9994 u=hxp n=ansible | PLAY [all] *********************************************************************************************
+2021-07-21 07:25:30,739 p=9994 u=hxp n=ansible | TASK [Add docker repo] *********************************************************************************
+2021-07-21 07:25:31,559 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:31,562 p=9994 u=hxp n=ansible | TASK [Remove runc] *************************************************************************************
+2021-07-21 07:25:33,600 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:33,603 p=9994 u=hxp n=ansible | TASK [Install docker-ce] *******************************************************************************
+2021-07-21 07:25:47,107 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:47,109 p=9994 u=hxp n=ansible | TASK [Configure Docker mirror] *************************************************************************
+2021-07-21 07:25:47,683 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:47,686 p=9994 u=hxp n=ansible | TASK [Enable docker service] ***************************************************************************
+2021-07-21 07:25:49,135 p=9994 u=hxp n=ansible | changed: [localhost]
+2021-07-21 07:25:49,137 p=9994 u=hxp n=ansible | TASK [Install pip] *************************************************************************************
+2021-07-21 07:25:50,514 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:50,517 p=9994 u=hxp n=ansible | TASK [Install docker-compose] **************************************************************************
+2021-07-21 07:25:51,613 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:51,616 p=9994 u=hxp n=ansible | TASK [Create docker-compose symlink for root] **********************************************************
+2021-07-21 07:25:51,999 p=9994 u=hxp n=ansible | ok: [localhost]
+2021-07-21 07:25:52,001 p=9994 u=hxp n=ansible | PLAY RECAP *********************************************************************************************
+2021-07-21 07:25:52,001 p=9994 u=hxp n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
