@@ -28,3 +28,8 @@
       pip:
         name: docker-compose
         state: present
+    - name: Create docker-compose symlink for root
+      file:
+        path: "/usr/bin/docker-compose"
+        src: "/usr/local/bin/docker-compose"
+        state: link
