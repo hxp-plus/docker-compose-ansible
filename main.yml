@@ -19,7 +19,7 @@
       copy:
         dest: "/etc/docker/daemon.json"
         content: |
-          {"registry-mirrors":["https://reg-mirror.qiniu.com/"]}
+          {"registry-mirrors":["http://f1361db2.m.daocloud.io"]}
     - name: Enable docker service
       systemd:
         name: docker
