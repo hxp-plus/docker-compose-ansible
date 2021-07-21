@@ -15,15 +15,19 @@
         name: docker-ce, docker-ce-cli, containerd.io
         update_cache: yes
         state: present
+    - name: Enable docker service
+      systemd:
+        name: docker
+        enabled: yes
+        state: restarted
     - name: Configure Docker mirror
       copy:
         dest: "/etc/docker/daemon.json"
         content: |
           {"registry-mirrors":["http://f1361db2.m.daocloud.io"]}
-    - name: Enable docker service
+    - name: Restart docker service
       systemd:
         name: docker
-        enabled: yes
         state: restarted
         daemon-reload: yes
     - name: Install pip
